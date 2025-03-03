@@ -124,16 +124,12 @@ func CreateDm(config *DmConfig) (*Dmsoft, error) {
 	// 如果提供了注册码，进行注册
 	if config.RegCode != "" {
 		ret := dm.Reg(config.RegCode, config.ExtraCode)
-		switch ret {
-		case 1:
+		if ret == 1 {
 			// 注册成功
 			log.Println("VIP注册成功")
-		case -1:
-			return nil, fmt.Errorf("注册失败: 无法连接网络")
-		case -2:
-			return nil, fmt.Errorf("注册失败: 进程没有以管理员方式运行")
-		default:
-			return nil, fmt.Errorf("注册失败: 未知错误")
+		} else {
+			// 注册失败，直接返回错误码
+			return nil, fmt.Errorf("注册失败: 错误码 %d", ret)
 		}
 	}
 
