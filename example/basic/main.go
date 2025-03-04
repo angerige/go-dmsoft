@@ -10,8 +10,8 @@ import (
 
 const (
 	// 填写自己的注册码
-	DmRegCode   = "XXXXX" // 示例注册码
-	DmExtraCode = "XXXXX" // 示例附加码
+	DmRegCode   = "" // 示例注册码
+	DmExtraCode = "" // 示例附加码
 )
 
 type _bytes struct {
@@ -32,9 +32,9 @@ func main() {
 
 	// 方式2：提供完整配置
 	dm, err = dmsoft.CreateDm(&dmsoft.DmConfig{
-		DllPath:   "E:\\yx_go\\go-dmsoft\\example\\basic\\dll", // 可选，指定路径
-		RegCode:   DmRegCode,                                   // 必须提供
-		ExtraCode: DmExtraCode,                                 // 必须提供
+		DllPath:   "E:\\yx_go\\go-dmsoft\\example\\basic\\assets", // 可选，指定路径
+		RegCode:   DmRegCode,                                      // 必须提供
+		ExtraCode: DmExtraCode,                                    // 必须提供
 	})
 	if err != nil {
 		log.Fatal(err)
