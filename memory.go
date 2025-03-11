@@ -1,5 +1,7 @@
 package dmsoft
 
+import "math"
+
 // 内存 相关函数
 
 func (com *Dmsoft) ReadString(hwnd int, addr string, type_, len int) string {
@@ -167,9 +169,9 @@ func (com *Dmsoft) ReadDoubleAddr(hwnd int, addr int64) float64 {
 	return float64(ret.Val)
 }
 
-func (com *Dmsoft) ReadFloat(hwnd int, addr string) float32 {
+func (com *Dmsoft) ReadFloat(hwnd int, addr string) float64 {
 	ret, _ := com.dm.CallMethod("ReadFloat", hwnd, addr)
-	return float32(ret.Val)
+	return float64(math.Float32frombits(uint32(ret.Val)))
 }
 
 func (com *Dmsoft) ReadFloatAddr(hwnd int, addr int64) float32 {
