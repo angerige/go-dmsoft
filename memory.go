@@ -9,9 +9,9 @@ func (com *Dmsoft) ReadString(hwnd int, addr string, type_, len int) string {
 	return ret.ToString()
 }
 
-func (com *Dmsoft) ReadInt(hwnd int32, addr string, type_ int32) int64 {
+func (com *Dmsoft) ReadInt(hwnd int, addr string, type_ int) int64 {
 	ret, _ := com.dm.CallMethod("ReadInt", hwnd, addr, type_)
-	return ret.Value().(int64)
+	return ret.Val
 }
 
 func (com *Dmsoft) ReadIntAddr(hwnd int, addr int64, type_ int) int64 {
