@@ -1,5 +1,3 @@
-github.com/angerige/go-dmsoft v0.0.0-20250311115941-4246f845e062 h1:foMagM+h0kZuifDpL72BnCTnO5CgoGXF49rUJACrWMo=
-github.com/angerige/go-dmsoft v0.0.0-20250311115941-4246f845e062/go.mod h1:HBdNvzNWdVbyRhANNSHd6bqRVjxWK0JsnBpAR3TYHwo=
 github.com/go-ole/go-ole v1.3.0 h1:Dt6ye7+vXGIKZ7Xtk4s6/xVdGDQynvom7xCFEdWr6uE=
 github.com/go-ole/go-ole v1.3.0/go.mod h1:5LS6F96DhAwUc7C+1HLexzMXY1xGRSryjyPPKW6zv78=
 golang.org/x/sys v0.1.0 h1:kunALQeHf1/185U1i0GOB/fy1IPRDDpuoOOqRReG57U=
